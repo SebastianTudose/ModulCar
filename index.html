@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ModulCar | Retrofit CarPlay & Android Auto</title>
+    <link rel="stylesheet" href="style.css?v=3">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="#home" class="logo">Modul<span>Car</span></a>
+            <ul class="nav-links">
+                <li><a href="#home">Acasă</a></li>
+                <li><a href="#cum-functioneaza">Cum Funcționează</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="#cos-cumpărături" class="btn-cart-nav">🛒 Coș <span id="cart-count">(0)</span></a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section id="home" class="hero">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <h1>Fără cabluri. <span class="highlight">Fără compromisuri.</span></h1>
+            <p>Găsește modulul wireless CarPlay & Android Auto dedicat mașinii tale. Integrare perfectă pe ecranul de fabrică.</p>
+
+            <div class="search-glass-panel">
+                <div class="form-group">
+                    <label><span>🚘</span> 1. Marca Auto</label>
+                    <select id="marcaSelect" class="premium-select">
+                        <option value="" disabled selected>Alege marca...</option>
+                        <option value="toyota">Toyota</option>
+                        <option value="bmw">BMW</option>
+                        <option value="audi">Audi</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label><span>🏎️</span> 2. Model</label>
+                    <select id="modelSelect" class="premium-select" disabled>
+                        <option value="" disabled selected>Alege modelul...</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label><span>📅</span> 3. An Fabricație</label>
+                    <select id="anSelect" class="premium-select" disabled>
+                        <option value="" disabled selected>Alege anul...</option>
+                    </select>
+                </div>
+                <div class="form-group btn-group">
+                    <button id="btnCauta" class="btn-search cta-pulse">Caută Sistemul</button>
+                </div>
+            </div>
+            
+            <div class="trust-badges">
+                <span>✓ Montaj Plug & Play</span>
+                <span>✓ Comenzi pe Volan</span>
+                <span>✓ Garanție 24 Luni</span>
+            </div>
+        </div>
+    </section>
+
+    <section id="rezultat-produs" class="product-section hidden">
+        <div class="product-container">
+            <div class="product-image">
+                <img src="produs-carplay.jpg" alt="Modul CarPlay Wireless">
+            </div>
+            <div class="product-details">
+                <span class="badge promo-badge">OFERTĂ LIMITATĂ - REDUCERE 50%</span>
+                <h2>Modul Wireless Premium CarPlay & Android Auto</h2>
+                <p class="price">499 RON <span class="old-price">998 RON</span></p>
+                <p class="description">
+                    Transformă sistemul tău original într-un centru multimedia modern. Te conectezi automat la telefon imediat ce intri în mașină, păstrând toate funcțiile de fabrică intacte.
+                </p>
+                <ul class="features-list">
+                    <li><strong>Navigație:</strong> Waze, Google Maps, Apple Maps</li>
+                    <li><strong>Muzică:</strong> Spotify, Apple Music, YouTube Music</li>
+                    <li><strong>Control Vocal:</strong> Siri & Google Assistant</li>
+                </ul>
+                <div class="action-buttons">
+                    <button id="btn-add-product" class="btn-buy cta-pulse">Adaugă în coș (499 RON)</button>
+                    <button id="btn-show-install" class="btn-install">Vreau cu Montaj</button>
+                </div>
+
+                <div id="install-prompt" class="install-prompt hidden">
+                    <p>⚠️ <strong>Atenție:</strong> Montarea se efectuează fizic doar în <strong>București și Iași</strong>. Costul serviciului este de <strong>249 RON</strong>.</p>
+                    <div class="prompt-actions">
+                        <button id="btn-confirm-install" class="btn-confirm">Sunt de acord, adaugă montajul</button>
+                        <button id="btn-cancel-install" class="btn-cancel">Anulează</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="cum-functioneaza" class="info-section">
+        <div class="section-header">
+            <h2>Cum Funcționează Modulul?</h2>
+            <div class="divider"></div>
+        </div>
+        <div class="info-content">
+            <div class="info-text">
+                <h3>Tehnologia de mâine, pe mașina ta de azi.</h3>
+                <p>Acest modul revoluționar reprezintă puntea perfectă dintre designul clasic al mașinii tale și inovația viitorului. Indiferent de anul de fabricație, interfața noastră se integrează perfect în "creierul" sistemului tău de infotainment.</p>
+                <p><strong>Ce face mai exact?</strong> Deblochează nativ ecosistemul Apple CarPlay și Android Auto direct pe ecranul original. Fără tăiere de fire, fără să adaugi tablete inestetice pe parbriz. Păstrezi camera de marșarier, senzorii și comenzile de pe volan.</p>
+                <p>Instalarea este <em>Plug & Play</em> (mufele se conectează direct la cele ale mașinii). Imediat ce pui contactul, telefonul tău se conectează wireless, iar Waze-ul și Spotify-ul sunt gata de drum.</p>
+            </div>
+            <div class="info-image">
+                <img src="https://images.unsplash.com/photo-1549317336-206569e8475c?q=80&w=800" alt="Bord Auto Smart">
+            </div>
+        </div>
+    </section>
+
+    <section id="cos-cumpărături" class="cart-section">
+        <div class="section-header">
+            <h2>Coșul Tău</h2>
+            <div class="divider"></div>
+        </div>
+        <div class="cart-container glass-effect">
+            <div id="cart-items" class="cart-items">
+                <p class="empty-cart">Coșul tău este momentan gol.</p>
+            </div>
+            
+            <div class="cart-summary">
+                <h3>Total de plată: <span id="cart-total" class="highlight">0 RON</span></h3>
+                <button id="btn-checkout" class="btn-checkout hidden">Finalizează Comanda</button>
+            </div>
+
+            <div id="checkout-form-container" class="checkout-form-container hidden">
+                <div class="divider" style="margin: 30px auto; width: 100%; height: 1px; background: rgba(255,255,255,0.1);"></div>
+                <h3 class="checkout-title">Detalii Livrare și Facturare</h3>
+                <form id="checkout-form">
+                    <div class="form-grid">
+                        <input type="text" placeholder="Nume și Prenume" required>
+                        <input type="tel" placeholder="Număr de telefon" required>
+                        <input type="email" placeholder="Adresa de email" required>
+                        <input type="text" placeholder="Județ / Localitate" required>
+                        <textarea placeholder="Adresa completă (Strada, Nr, Bloc, Scara, Ap)" required rows="3" class="full-width"></textarea>
+                    </div>
+                    
+                    <div class="payment-methods">
+                        <h4>Metoda de plată</h4>
+                        <label class="radio-label">
+                            <input type="radio" name="plata" checked> 
+                            <span>💵 Plata ramburs (la curier / la montaj)</span>
+                        </label>
+                        <label class="radio-label disabled-radio">
+                            <input type="radio" name="plata" disabled> 
+                            <span>💳 Card Bancar online (Indisponibil temporar)</span>
+                        </label>
+                    </div>
+
+                    <button type="submit" class="btn-submit-order cta-pulse">Plasează Comanda Acum</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="contact-section">
+        <div class="section-header">
+            <h2>Ia legătura cu noi</h2>
+            <div class="divider"></div>
+        </div>
+        <div class="contact-wrapper">
+            <div class="contact-info glass-effect">
+                <h3>Date de Contact</h3>
+                <p>Ai întrebări despre compatibilitatea mașinii tale sau vrei detalii despre montaj? Suntem aici să te ajutăm.</p>
+                <div class="contact-details">
+                    <p>📧 <strong>Email:</strong> salut@modulcar.ro</p>
+                    <p>📞 <strong>Telefon:</strong> +40 740 123 456</p>
+                    <p>📍 <strong>Locații Montaj:</strong> București (Sect. 1) & Iași (Centru)</p>
+                    <p>🕒 <strong>Program:</strong> Luni - Vineri: 09:00 - 18:00</p>
+                </div>
+            </div>
+            <div class="contact-form glass-effect">
+                <h3>Trimite-ne un mesaj</h3>
+                <form onsubmit="event.preventDefault(); alert('Mesajul a fost trimis! Vă vom contacta în scurt timp.'); this.reset();">
+                    <input type="text" placeholder="Numele tău" required>
+                    <input type="email" placeholder="Adresa de email" required>
+                    <textarea rows="4" placeholder="Cu ce te putem ajuta? (Ex: Am un BMW F30 din 2015...)" required></textarea>
+                    <button type="submit" class="btn-submit">Trimite Mesajul</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        // --- 1. Logica pentru Selectoare (Cascading YMM) ---
+        const carData = {
+            "toyota": { "Corolla": ["2014 - 2019", "2020 - 2024"], "RAV4": ["2013 - 2018", "2019 - 2024"] },
+            "bmw": { "Seria 3": ["2012 - 2018", "2019 - 2024"], "Seria 5": ["2010 - 2017", "2018 - 2023"] },
+            "audi": { "A4": ["2009 - 2016", "2017 - 2024"], "Q5": ["2008 - 2016", "2017 - 2024"] }
+        };
+
+        const marcaSelect = document.getElementById('marcaSelect');
+        const modelSelect = document.getElementById('modelSelect');
+        const anSelect = document.getElementById('anSelect');
+        const btnCauta = document.getElementById('btnCauta');
+        const sectiuneProdus = document.getElementById('rezultat-produs');
+
+        marcaSelect.addEventListener('change', function() {
+            const modele = carData[this.value];
+            modelSelect.innerHTML = '<option value="" disabled selected>Alege modelul...</option>';
+            anSelect.innerHTML = '<option value="" disabled selected>Alege anul...</option>';
+            anSelect.disabled = true;
+            for (let model in modele) {
+                let option = document.createElement('option');
+                option.value = model; option.textContent = model;
+                modelSelect.appendChild(option);
+            }
+            modelSelect.disabled = false;
+        });
+
+        modelSelect.addEventListener('change', function() {
+            const ani = carData[marcaSelect.value][this.value];
+            anSelect.innerHTML = '<option value="" disabled selected>Alege anul...</option>';
+            ani.forEach(function(an) {
+                let option = document.createElement('option');
+                option.value = an; option.textContent = an;
+                anSelect.appendChild(option);
+            });
+            anSelect.disabled = false;
+        });
+
+        btnCauta.addEventListener('click', function() {
+            if(marcaSelect.value && modelSelect.value && anSelect.value) {
+                sectiuneProdus.classList.remove('hidden');
+                sectiuneProdus.scrollIntoView({ behavior: 'smooth' });
+            } else {
+                alert("Completează toți pașii (Marca, Model, An) pentru a căuta.");
+            }
+        });
+
+        // --- 2. Logica pentru Coș, Montaj și Checkout ---
+        let cart = [];
+        const btnAddProduct = document.getElementById('btn-add-product');
+        const btnShowInstall = document.getElementById('btn-show-install');
+        const installPrompt = document.getElementById('install-prompt');
+        const btnConfirmInstall = document.getElementById('btn-confirm-install');
+        const btnCancelInstall = document.getElementById('btn-cancel-install');
+        
+        const cartItemsDiv = document.getElementById('cart-items');
+        const cartTotalSpan = document.getElementById('cart-total');
+        const cartCountSpan = document.getElementById('cart-count');
+        
+        const btnCheckout = document.getElementById('btn-checkout');
+        const checkoutFormContainer = document.getElementById('checkout-form-container');
+        const checkoutForm = document.getElementById('checkout-form');
+
+        btnShowInstall.addEventListener('click', () => installPrompt.classList.remove('hidden'));
+        btnCancelInstall.addEventListener('click', () => installPrompt.classList.add('hidden'));
+
+        // Funcția de actualizare a coșului în pagină
+        function updateCartUI() {
+            cartItemsDiv.innerHTML = '';
+            let total = 0;
+
+            if (cart.length === 0) {
+                cartItemsDiv.innerHTML = '<p class="empty-cart">Coșul tău este momentan gol.</p>';
+                btnCheckout.classList.add('hidden');
+                checkoutFormContainer.classList.add('hidden'); // Ascunde checkout dacă se golește coșul
+            } else {
+                cart.forEach((item) => {
+                    total += item.price;
+                    cartItemsDiv.innerHTML += `
+                        <div class="cart-item">
+                            <span class="item-name">${item.name}</span>
+                            <div class="item-actions">
+                                <span class="item-price">${item.price} RON</span>
+                                <button onclick="removeFromCart('${item.id}')" class="btn-remove" title="Șterge produsul">✕</button>
+                            </div>
+                        </div>
+                    `;
+                });
+                btnCheckout.classList.remove('hidden');
+            }
+            cartTotalSpan.textContent = total + " RON";
+            cartCountSpan.textContent = `(${cart.length})`;
+        }
+
+        // Funcția de ștergere produs din coș (accesibilă global)
+        window.removeFromCart = function(id) {
+            cart = cart.filter(item => item.id !== id);
+            updateCartUI();
+        };
+
+        // Adăugare Produs Simplu
+        btnAddProduct.addEventListener('click', () => {
+            if(!cart.find(item => item.id === 'produs')) {
+                cart.push({ id: 'produs', name: `Modul CarPlay (${marcaSelect.value || 'Auto'})`, price: 499 });
+                updateCartUI();
+                alert('Modulul a fost adăugat în coș!');
+                document.getElementById('cos-cumpărături').scrollIntoView({ behavior: 'smooth' });
+            } else {
+                alert('Modulul este deja în coș!');
+            }
+        });
+
+        // Adăugare Montaj
+        btnConfirmInstall.addEventListener('click', () => {
+            if(!cart.find(item => item.id === 'produs')) {
+                cart.push({ id: 'produs', name: `Modul CarPlay (${marcaSelect.value || 'Auto'})`, price: 499 });
+            }
+            if(!cart.find(item => item.id === 'montaj')) {
+                cart.push({ id: 'montaj', name: 'Serviciu Montaj (Buc/Iași)', price: 249 });
+                alert('Produsul și serviciul de montaj au fost adăugate în coș!');
+            } else {
+                alert('Montajul este deja adăugat în coș.');
+            }
+            updateCartUI();
+            installPrompt.classList.add('hidden');
+            document.getElementById('cos-cumpărături').scrollIntoView({ behavior: 'smooth' });
+        });
+
+        // Afișare formular de checkout
+        btnCheckout.addEventListener('click', () => {
+            checkoutFormContainer.classList.remove('hidden');
+            checkoutFormContainer.scrollIntoView({ behavior: 'smooth' });
+        });
+
+        // Trimiterea comenzii (Simulare)
+        checkoutForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            alert('🎉 Comanda a fost plasată cu succes! Veți fi contactat în scurt timp pentru confirmare.');
+            cart = []; // Golește coșul după comandă
+            updateCartUI();
+            checkoutForm.reset(); // Resetează formularul
+        });
+    </script>
+</body>
+</html>
